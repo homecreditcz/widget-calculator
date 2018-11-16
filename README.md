@@ -17,7 +17,7 @@ Na stránku s produkty, u kterých si zákazník může zvolit nákup na splátk
 1. přidat tlačítko (či obdobný prvek) "Nákup na splátky", které vyvolá pro dané zboží kalkulačku.
    HTML element bude mít nastaveno zpracování události onClick - spuštění pomocné funkce showCalc.
 
-```javascript
+```html
 <button onclick="showCalc()">Nákup na splátky</button>
 ```
 
