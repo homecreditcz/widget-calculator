@@ -30,7 +30,9 @@ Na stránku s produkty, u kterých si zákazník může zvolit nákup na splátk
    - price - cena daného zboží
    - downPayment - hodnota akontace; může být 0
    - fixDownPayment - true / false, parametr, který zakáže nastavení akontace uživatelem a počítá, že je 0
-   - dataCalculatorBaseUrl - základ URL, ke kterému se přidá 'api/calculate' respektive 'api/initpayrange' pro volání daných služeb. Např.: `https://eshop.example.com/`
+   - dataCalculatorBaseUrl – pevně daná URL dodaná HC
+     - pro testovací účely to je: `https://apicz-test.homecredit.net/verdun-train/public/v1/calculator/` (CZ), či `https://apisk-test.homecredit.net/verdun-train/public/v1/calculator/` (SK)
+     - na produkčním prostředí to je: `https://api.homecredit.cz/public/v1/calculator/` (CZ)  
    - apiKey - klic uctu, konstanta, dodávaná HC
    - processCalcResult - JS funkce, která se zavolá, když si zákazník zvolí některou z nabízených možností splácení.
 
@@ -41,7 +43,7 @@ Na stránku s produkty, u kterých si zákazník může zvolit nákup na splátk
       var price = 14000; // number in minor units
       var downPayment = 00; // number in minor units
       var fixDownPayment = true; // parameter to decide if enable od disable downpayment
-      var dataCalculatorBaseUrl = 'http://eshop.example.com/';
+      var dataCalculatorBaseUrl = 'https://apicz-test.homecredit.net/verdun-train/public/v1/calculator/';
       var apiKey = 'sample-key';
       showHcCalc( productSetCode, price, downPayment, fixDownPayment, dataCalculatorBaseUrl,apiKey, processCalcResult);
     }
