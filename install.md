@@ -29,11 +29,10 @@ Na stránku s produkty, u kterých si zákazník může zvolit nákup na splátk
    - productSetCode - konstanta dodaná HC
    - price - cena daného zboží
    - downPayment - hodnota akontace; může být 0
-
-- fixDownPayment - true / false, parametr, který zakáže nastavení akontace uživatelem a počítá, že je 0
-  - dataCalculatorBaseUrl - základ URL, ke kterému se přidá 'api/calculate' respektive 'api/initpayrange' pro volání daných služeb. Např.: `https://eshop.example.com/`
-- apiKey - klic uctu, konstanta, dodávaná HC
-  - processCalcResult - JS funkce, která se zavolá, když si zákazník zvolí některou z nabízených možností splácení.
+   - fixDownPayment - true / false, parametr, který zakáže nastavení akontace uživatelem a počítá, že je 0
+   - dataCalculatorBaseUrl - základ URL, ke kterému se přidá 'api/calculate' respektive 'api/initpayrange' pro volání daných služeb. Např.: `https://eshop.example.com/`
+   - apiKey - klic uctu, konstanta, dodávaná HC
+   - processCalcResult - JS funkce, která se zavolá, když si zákazník zvolí některou z nabízených možností splácení.
 
 ```javascript
 	// helper function example
