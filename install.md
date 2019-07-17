@@ -40,7 +40,7 @@ Na stránku s produkty, u kterých si zákazník může zvolit nákup na splátk
 	// helper function example
     function showCalc() {
       var productSetCode = 'CO123'; // example
-      var price = 14000; // number in minor units
+      var price = 140000; // number in minor units
       var downPayment = 00; // number in minor units
       var fixDownPayment = true; // parameter to decide if enable od disable downpayment
       var dataCalculatorBaseUrl = 'https://apicz-test.homecredit.net/verdun-train/public/v1/calculator/';
