@@ -1,8 +1,8 @@
 # Home Credit online kalkulačka
 
-## Kuchařka
+## Popis řešení online kalkulačky
 
-Kuchařku s podrobným popisem naleznete na projektové [WIKI](https://github.com/homecreditcz/widget-calculator/wiki).
+Podrobný popis řešení online kalkulačky naleznete na projektové [WIKI](https://github.com/homecreditcz/widget-calculator/wiki).
 
 ## Instalace software Kalkulačky
 
