@@ -8,9 +8,9 @@
 
 ### CZ
 
-[hc-calc-cz-v6](releases/hc-calc-cz-v6-85351348.zip)
+[hc-calc-cz-v7](releases/hc-calc-cz-v7-20190808.zip)
 
 ### SK
 
-[hc-calc-sk-v6](releases/hc-calc-sk-v6-85351348.zip)
+[hc-calc-sk-v7](releases/hc-calc-sk-v7-20190808.zip)
 
