@@ -12,7 +12,7 @@
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-### SK - Verzia pre Slovenskú republiku
+### SK - verzia pre Slovenskú republiku
 
 [hc-calc-sk-v8](releases/hc-calc-sk-v8-20190812.zip)
 
