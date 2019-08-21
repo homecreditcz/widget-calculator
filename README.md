@@ -6,11 +6,13 @@
 
 ## Vydané verze
 
-### CZ
+### CZ - verze pro Českou republiku
 
 [hc-calc-cz-v8](releases/hc-calc-cz-v8-20190812.zip)
 
-### SK
+- - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+### SK - Verzia pre Slovenskú republiku
 
 [hc-calc-sk-v8](releases/hc-calc-sk-v8-20190812.zip)
 
