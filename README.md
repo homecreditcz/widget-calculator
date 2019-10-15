@@ -8,11 +8,11 @@
 
 ### CZ - verze pro Českou republiku
 
-[hc-calc-cz-v8](releases/hc-calc-cz-v8-20190812.zip)
+[hc-calc-cz-v8](https://github.com/homecreditcz/widget-calculator/tree/master/releases/CZ/dist)
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### SK - verzia pre Slovenskú republiku
 
-[hc-calc-sk-v8](releases/hc-calc-sk-v8-20190812.zip)
+[hc-calc-sk-v8](https://github.com/homecreditcz/widget-calculator/tree/master/releases/SK/dist)
 
