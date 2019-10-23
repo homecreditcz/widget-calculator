@@ -1,9 +1,7 @@
 # Home Credit on-line - kalkulačka splátek
 
 ## Dokumentace
-[Instalace](install.md)  
-[Testovací prostředí](https://github.com/homecreditcz/widget-calculator/wiki/Testovac%C3%AD-prost%C5%99ed%C3%AD)  
-[Produkční prostředí](https://github.com/homecreditcz/widget-calculator/wiki/Produk%C4%8Dn%C3%AD-prost%C5%99ed%C3%AD)  
+[Instalace](https://github.com/homecreditcz/widget-calculator/blob/master/docs/install.md)  
 
 ## Vydané verze
 
