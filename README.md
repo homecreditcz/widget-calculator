@@ -1,4 +1,4 @@
-# Home Credit online kalkulačka
+# Home Credit on-line - kalkulačka splátek
 
 ## Dokumentace
 [Instalace](install.md)  
