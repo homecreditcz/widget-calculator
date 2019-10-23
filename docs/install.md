@@ -1,8 +1,6 @@
 # Home Credit online kalkulačka
 
-## Popis řešení online kalkulačky
-
-Podrobný popis řešení online kalkulačky naleznete na projektové [WIKI](https://github.com/homecreditcz/widget-calculator/wiki).
+Kalkulačka (jejíž kód běží v prohlížeči zákazníka) potřebuje získat data o možných splátkách. Pomocí HTTP GET provolá odpovídající API endpointy Home Creditu. Tyto požadavky musí obsahovat odpovídající API key HTTP hlavičku.
 
 ## Instalace software Kalkulačky
 
@@ -48,6 +46,8 @@ která zjistí potřebné údaje a zavolá dodanou funkci `showHcCalc(productSet
   - pro testovací účely:
     - CZ: ***calculator_test_key***
     - SK: ***calculator_test_key_sk***
+  - na produkčním prostředí:
+    - obdržíte od zodpovědné osoby z HC po schválení vaší implementace
 
 - `processCalcResult` - JS funkce, která se zavolá, když si zákazník zvolí některou z nabízených možností splácení.
 
@@ -132,6 +132,3 @@ function processCalcResult(calcResult) {
 
 ### 7. Případná úprava zobrazení kalkulačky 
 Když má eshop fixní menu, je potřeba zvětšit odsazení kalkulačky od vrchní hrany obrazovky ==> na classu: `"hc-modal"` přidat `"padding-top"`
-
-## Úprava API služeb e-shopu
-Kalkulačka (jejíž kód běží v prohlížeči zákazníka) potřebuje získat data o možných splátkách. Pomocí HTTP GET provolá odpovídající API endpoint Home Creditu. Tento požadavek musí obsahovat odpovídající Api key HTTP hlavičku.
