@@ -5,7 +5,7 @@ Vlastní kód kalkulačky je třeba nahrát na webový server.
 Jedná se o soubory JS, styly a ikony v adresáři hc-calc.
 Webový server je třeba nakonfigurovat tak, aby požadavky na soubory v dané cestě (pod `/hc-calc/*`) korektně obsluhoval, a to včetně korektních hlaviček Content-type.
 
-Příklad: https://eshop.example.com/hc-calc/js/app.js
+Příklad: `https://eshop.example.com/hc-calc/js/app.js`
 
 
 ## Integrace s e-shopem
