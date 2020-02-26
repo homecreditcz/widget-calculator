@@ -20,7 +20,7 @@ HTML element bude mít nastaveno zpracování události onClick - spuštění po
 <button onclick="showCalc()">Nákup na splátky</button>
 ```
 2. naimplementovat pomocnou funkci `showCalc()`, která zjistí potřebné údaje a zavolá dodanou funkci `showHcCalc(salesRoomCode, productSet, price, downPayment, fixDownPayment, dataCalculatorBaseUrl, processCalcResult);`
-	
+
 	- productSetCode - konstanta dodaná HC
 	- price - cena daného zboží
 	- downPayment - hodnota akontace; může být 0
@@ -37,7 +37,7 @@ HTML element bude mít nastaveno zpracování události onClick - spuštění po
       var downPayment = 00; // number in minor units
       var fixDownPayment = true; // parameter to decide if enable od disable downpayment
       var dataCalculatorBaseUrl = 'http://eshop.example.com/';
-      var apiKey = 'sample-key';
+      var apiKey = 'calculator_test_key';
       showHcCalc( productSetCode, price, downPayment, fixDownPayment, dataCalculatorBaseUrl,apiKey, processCalcResult);
     }
 
@@ -50,7 +50,7 @@ function processCalcResult(calcResult) {
 	console.log(calcResult);
 	// store the values ...
 	// go to basket ...
-} 
+}
 
 // calcResult object example:
 {
