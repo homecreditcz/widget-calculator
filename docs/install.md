@@ -46,8 +46,8 @@ která zjistí potřebné údaje a zavolá dodanou funkci `showHcCalc(productSet
 
 - `apiKey` – API klíč, konstanta dodaná HC
   - pro testovací účely:
-    - CZ: ***calculator_test_key***
-    - SK: ***calculator_test_key_sk***
+    - CZ: ***calculator_test_key*** / ***calculator_test_key_dp*** (s podporou pro akontace)
+    - SK: ***calculator_test_key_sk*** / ***calculator_test_key_sk_dp*** (s podporou pro akontace)
   - na produkčním prostředí:
     - obdržíte od zodpovědné osoby z HC po schválení vaší implementace
 
