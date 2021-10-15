@@ -37,7 +37,7 @@ HTML element bude mít nastaveno zpracování události onClick - spuštění po
       var downPayment = 00; // number in minor units
       var fixDownPayment = true; // parameter to decide if enable od disable downpayment
       var dataCalculatorBaseUrl = 'http://eshop.example.com/';
-      var apiKey = 'sample-key';
+      var apiKey = 'calculator_test_key';
       showHcCalc( productSetCode, price, downPayment, fixDownPayment, dataCalculatorBaseUrl,apiKey, processCalcResult);
     }
 
