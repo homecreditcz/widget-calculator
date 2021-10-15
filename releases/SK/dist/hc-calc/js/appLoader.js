@@ -32,6 +32,12 @@ function hcCalcloaded(baseUrl, apiKey, productSetCode, price, downPayment, fixDo
   script.src = 'hc-calc/js/app.js';
   head.appendChild(script);
 
+  var configLoaderScript = doc.createElement('script');
+  configLoaderScript.charset = 'UTF-8';
+  configLoaderScript.type = 'text/javascript';
+  configLoaderScript.src = 'configLoader.js';
+  head.appendChild(configLoaderScript);
+
   var resizeScript = doc.createElement('script');
   resizeScript.src = 'hc-calc/js/resize.contentWindow.js';
   head.appendChild(resizeScript);
