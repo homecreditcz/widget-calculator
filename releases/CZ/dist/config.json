@@ -2,8 +2,8 @@
   "VUE_APP_MODE": "widget",
   "VUE_APP_API_BASE_URL": "https://api.homecredit.cz/public/v1/calculator/",
   "VUE_APP_CULTURE": "cs-CZ",
-  "VUE_APP_API_KEY": "buhGztsSbU2Evsx57tYn",
+  "VUE_APP_API_KEY": "calculator_test_key",
   "VUE_APP_PRODUCT_SET_CODE": "COCHCONL",
-  "VUE_APP_GTM_CODE": "GTM-NBZD29B",
+  "VUE_APP_GTM_CODE": "GTM-NBZD00B",
   "VUE_APP_URL_TURBO": "https://www.homecredit.cz/file-download/2/9/5/3/BA-BONUS-100ZPET-IEK.pdf"
 }
