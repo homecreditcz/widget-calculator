@@ -10,6 +10,10 @@ Příklad: https://eshop.example.com/hc-calc/js/app.js
 
 ## Integrace s e-shopem
 
+### Inicializace souboru `config.json`
+
+Soubor `config.json` není třeba až na jednu položku nastavovat. V tuto chvíli je pro plnou funkčnost doporučeno vyplnit do proměnné `VUE_APP_API_KEY` reálný produkční API key, který vám byl přidělen.
+
 ### Úprava webových stránek e-shopu
 
 Na stránku s produkty, u kterých si zákazník může zvolit nákup na splátky, je třeba:
