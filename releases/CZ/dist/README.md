@@ -109,8 +109,5 @@ function processCalcResult(calcResult) {
 Kalkulačka (jejíž kód běží v prohlížeči zákazníka) potřebuje získat data o možných splátkách.
 Pomocí HTTP GET provolá odpovídající API endpoint Home Creditu. Tento požadavek musí obsahovat odpovídající Api key HTTP hlavičku
 
-### Definice
-[Aktuální definice API](https://intranet.finance.homecredit.cz/download/attachments/103787108/Public%20API%20%283%20endpointy%29%20.apib?api=v2)
-
 ### Kontaktní osoba
 Jakub Klos (jakub.klos@homecredit.cz)
