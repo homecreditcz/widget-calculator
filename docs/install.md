@@ -41,8 +41,8 @@ která zjistí potřebné údaje a zavolá dodanou funkci `showHcCalc(productSet
 
 - `dataCalculatorBaseUrl` – pevně daná URL dodaná HC
   - pro testovací účely: 
-    - CZ: `https://apicz-test.homecredit.net/verdun-train/public/v1/calculator/`
-    - SK: `https://apisk-test.homecredit.net/verdun-train/public/v1/calculator/`
+    - CZ: `https://apicz-test.homecredit.cz/verdun-train/public/v1/calculator/`
+    - SK: `https://apisk-test.homecredit.sk/verdun-train/public/v1/calculator/`
   - na produkčním prostředí: 
     - CZ: `https://api.homecredit.cz/public/v1/calculator/`
 
@@ -62,7 +62,7 @@ function showCalc() {
   var price = document.getElementById('my-product-price').value;        
   var downPayment = 0;         
   var fixDownPayment = true;        
-  var dataCalculatorBaseUrl = 'https://apicz-test.homecredit.net/verdun-train/public/v1/calculator/';        
+  var dataCalculatorBaseUrl = 'https://apicz-test.homecredit.cz/verdun-train/public/v1/calculator/';        
   var apiKey = 'calculator_test_key';
   showHcCalc(productSetCode, price, downPayment, fixDownPayment, dataCalculatorBaseUrl, apiKey, processCalcResult);  
 }
