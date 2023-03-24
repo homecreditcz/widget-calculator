@@ -114,4 +114,4 @@ Kalkulačka (jejíž kód běží v prohlížeči zákazníka) potřebuje získa
 Pomocí HTTP GET provolá odpovídající API endpoint Home Creditu. Tento požadavek musí obsahovat odpovídající Api key HTTP hlavičku
 
 ### Kontaktní osoba
-Jakub Klos (jakub.klos@homecredit.cz)
+Tomáš Bárta (tomas.barta@homecredit.cz)
