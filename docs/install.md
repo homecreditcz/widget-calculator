@@ -6,9 +6,9 @@ Kalkulačka (jejíž kód běží v prohlížeči zákazníka) potřebuje získa
 
 ## Instalace software Kalkulačky
 
-Vlastní kód kalkulačky je třeba nahrát na webový server. Jedná se o soubory JS, styly a ikony v adresáři hc-calc. Webový server je třeba nakonfigurovat tak, aby požadavky na soubory v dané cestě (pod `/hc-calc/*`) korektně obsluhoval, a to včetně korektních hlaviček Content-type.
+Vlastní kód kalkulačky je třeba nahrát na webový server. Jedná se o soubor JS konrétně app.js.
 
-Příklad: https://eshop.example.com/hc-calc/js/app.js
+Příklad: https://eshop.example.com/js/app.js
 
 ## Úprava webových stránek e-shopu
 
@@ -24,7 +24,7 @@ které vyvolá pro dané zboží kalkulačku. HTML element bude mít nastaveno z
 
 ### 2. Naimplementovat pomocnou funkci `showCalc()`, 
 
-která zjistí potřebné údaje a zavolá dodanou funkci `showHcCalc(productSetCode, price, downPayment, fixDownPayment, dataCalculatorBaseUrl, apiKey, processCalcResult);`
+která obsahuje potřebné udaje pro zobrazení kalkulačky.
 
 - `productSetCode` - konstanta dodaná HC 
   - pro testovací účely:
@@ -34,11 +34,9 @@ která zjistí potřebné údaje a zavolá dodanou funkci `showHcCalc(productSet
 > Tento parametr udává produktovou sadu Home Creditu, jenž se má pro výpočet použít - pokud je zboží zařazeno do speciální akce (např. "Za 0%"), na které se vztahuje kalkulace pod akční produktovou sadou, je potřeba tuto sadu v tomto kroku použít - **Je žádoucí, aby ve správě produktů e-shopu byla možnost tuto vlastnost jednoduše nastavovat (alternativou je mít tuto možnost např. pro vybranou kategorii produktů). Výběr konkrétního produktu pak vede na použití akční produktové sady (`productSetCode`) při inicializaci kalkulačky**
 
 - `price` - cena daného zboží (košíku)
-
-- `downPayment` - hodnota akontace; může být 0
-
+- `language` - jazyk ve kterém kalkulačka běží. Pokud není dodán používá se Čeština
+- `downPayment` - hodnota akontace, může být 0
 - `fixDownPayment` – vypnutí podpory volitelné akontace
-
 - `dataCalculatorBaseUrl` – pevně daná URL dodaná HC
   - pro testovací účely: 
     - CZ: `https://apicz-test.homecredit.cz/verdun-train/public/v1/calculator/`
@@ -54,17 +52,22 @@ která zjistí potřebné údaje a zavolá dodanou funkci `showHcCalc(productSet
     - obdržíte od zodpovědné osoby z HC po schválení vaší implementace
 
 - `processCalcResult` - JS funkce, která se zavolá, když si zákazník zvolí některou z nabízených možností splácení.
+- `debug` - možnost zapnout si debug. pomoci app.debug=true, který pomahá při implementaci a hledání případných chyb
+- `document.body.appendChild(app)` - zde určujeme kde v DOMu chceme kalkulačku zobrazit. Dle příkladu se kalkulačka zobrazí v tagu body.
 
 ```javascript
 // helper function example  
-function showCalc() {        
-  var productSetCode = 'COCHCONL'; 
-  var price = document.getElementById('my-product-price').value;        
-  var downPayment = 0;         
-  var fixDownPayment = true;        
-  var dataCalculatorBaseUrl = 'https://apicz-test.homecredit.cz/verdun-train/public/v1/calculator/';        
-  var apiKey = 'calculator_test_key';
-  showHcCalc(productSetCode, price, downPayment, fixDownPayment, dataCalculatorBaseUrl, apiKey, processCalcResult);  
+function showCalc() {
+    let app = document.createElement('hc-calc');
+    app.callback = processCalcResult;
+    app.apiKey = 'calculator_test_key'; // example
+    app.dataCalculatorBaseUrl = 'https://apicz-test.homecredit.cz/verdun-train/public/v1/calculator/';
+    app.productSetCode = 'COCHCONL'; // example
+    app.price = document.getElementById('price').value; // number in minor units
+    app.downPayment = 0; // number in minor units
+    app.fixDownPayment = true; // parameter to decide if enable od disable downpayment
+    app.language = 'cs-CZ'; // Language can be "cs-CZ" or "sk-SK"
+    document.body.appendChild(app); // Where to mount calculator
 }
 ```
 
@@ -83,7 +86,7 @@ function processCalcResult(calcResult) {
   annualInterestRate: 19.97,
   creditAmount: 1300000, // minor units
   creditTotalRepay: 1554000, // minor units
-	preferredDownPayment: 100000, // minor units
+  preferredDownPayment: 100000, // minor units
   legalLine: "Každou žádost posuzujeme...",
   preferredInstallment: 129500, // minor units
   productCode: "COCONL12",
@@ -92,47 +95,19 @@ function processCalcResult(calcResult) {
 }
 ```
 
-### 4. Naimportovat styly a fonty pro danou html stránku
+### 4. Naimportovat fonty pro danou html stránku
+Do hlavičky přidat fonty
 
 ```html
 <head>
-  <link rel="stylesheet" href="hc-calc/style/style.css">
-  
-  <!-- Typekit Acumin Pro font initialization -->
-  <script src="https://use.typekit.net/mxi3qpt.js"></script>
-  <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
-  ...
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 </head>
 ```
 
 ### 5. Naimportovat skripty kalkulačky
-
+Cestu ke scriptu si zvolíte sami
 ```html
-<script src="hc-calc/js/resize.js"></script>
-<script src="hc-calc/js/appLoader.js"></script>
+<script src="./app.js"></script>
 ```
-
-### 6. Vložit container kalkulačky do <body> html stránky
-
-```html
-<div id="hc-calc-container">
- <div id="hc-calc-modal" class="hc-modal" role="dialog" style="display: none">
-   <div class="hc-modal__dialog">
-     <div class="hc-modal__content">
-       <div id="hc-modal-header" class="hc-modal__header">
-         <a id="hc-close-button" href="JavaScript:void(0)" class="hc-modal__close" 
-             onclick="document.getElementById('hc-calc-modal').style.display = 'none'"></a>
-         <div class="hc-modal__logo">
-           <img src="hc-calc/img/logo.svg" alt="logo" />
-         </div>
-         <div class="hc-modal__title">NÁKUP NA SPLÁTKY</div>
-       </div>
-       <div id="hc-calculator-wrapper" class="hc-modal-body" ></div>
-     </div>
-   </div>
- </div>
-</div>
-```
-
-### 7. Případná úprava zobrazení kalkulačky 
-Když má eshop fixní menu, je potřeba zvětšit odsazení kalkulačky od vrchní hrany obrazovky ==> na classu: `"hc-modal"` přidat `"padding-top"`

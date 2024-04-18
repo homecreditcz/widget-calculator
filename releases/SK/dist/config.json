@@ -1,9 +1,0 @@
-{
-  "VUE_APP_MODE": "widget",
-  "VUE_APP_API_BASE_URL": "https://api.homecredit.sk/public/v1/calculator/",
-  "VUE_APP_CULTURE": "sk-SK",
-  "VUE_APP_API_KEY": "calculator_test_key",
-  "VUE_APP_PRODUCT_SET_CODE": "COCHCONL",
-  "VUE_APP_GTM_CODE": "GTM-TTSKCZ0",
-  "VUE_APP_URL_TURBO": "https://www.homecredit.sk/download/1/5/6/2/BA-BONUS-100SPAT-IEK.pdf"
-}

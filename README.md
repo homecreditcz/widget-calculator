@@ -3,13 +3,8 @@
 ## Dokumentace
 [Instalace](https://github.com/homecreditcz/widget-calculator/blob/master/docs/install.md)  
 
+## Migrace v9 na v10
+[Migrační návod](https://github.com/homecreditcz/widget-calculator/blob/master/docs/MigrationTov10.md)  
+
 ## Vydané verze
-
-### CZ - verze pro Českou republiku
-[hc-calc-cz-v9](https://github.com/homecreditcz/widget-calculator/tree/master/releases/CZ/dist)
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-### SK - verzia pre Slovenskú republiku
-[hc-calc-sk-v9](https://github.com/homecreditcz/widget-calculator/tree/master/releases/SK/dist)
-
+[hc-calc-cz-v10](https://github.com/homecreditcz/widget-calculator/releases)
