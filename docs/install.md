@@ -53,6 +53,8 @@ která obsahuje potřebné udaje pro zobrazení kalkulačky.
 
 - `processCalcResult` - JS funkce, která se zavolá, když si zákazník zvolí některou z nabízených možností splácení.
 - `debug` - možnost zapnout si debug. pomoci app.debug=true, který pomahá při implementaci a hledání případných chyb
+- `isModal` - možnost zapnout ci vypnout zda se ma kalkulacka zobrazit v modalu a nebo ji vykreslit do prislusneho elementu, ktery se urcije pomoci document.body.appendChild(app). 
+- `hideHeader` - možnost zapnout ci vypnout ci se ma zobrazovat hlavicka, ta obsahuje logo HomeCreditu, nadpis a krizek. 
 - `document.body.appendChild(app)` - zde určujeme kde v DOMu chceme kalkulačku zobrazit. Dle příkladu se kalkulačka zobrazí v tagu body.
 
 ```javascript
@@ -67,6 +69,8 @@ function showCalc() {
     app.downPayment = 0; // number in minor units
     app.fixDownPayment = true; // parameter to decide if enable od disable downpayment
     app.language = 'cs-CZ'; // Language can be "cs-CZ" or "sk-SK"
+    app.isModal = true; // parametr to decide if launch in model or not
+    app.hideHeader = false; // parametr to decide if hide header of hc-calc
     document.body.appendChild(app); // Where to mount calculator
 }
 ```
